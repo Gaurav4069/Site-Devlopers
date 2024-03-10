@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+import validator from "validator";
 const userSchema=new mongoose.Schema(
   {
    name:{
@@ -10,7 +10,12 @@ const userSchema=new mongoose.Schema(
    email:{
      type:String,
      require:true,
-     unique:true,
+     unique:[true,"Email id is already exists"],
+     validate(value){
+      if(!validator.isEmail(value)){
+        throw new Error("Invalid Email")
+      }
+     }
    },
    password:{
     type:String,
@@ -19,6 +24,7 @@ const userSchema=new mongoose.Schema(
    phone:{
     type: String,
     required:true,
+    unique:true
    },
    address:{
     type:String,
@@ -33,5 +39,5 @@ const userSchema=new mongoose.Schema(
 {
 timestamps:true      //register time will add
 })
-
+//collection making
 export default mongoose.model('users',userSchema);

@@ -5,7 +5,7 @@ Team Members Name:
 • Md Talha  (abu-talha-siddique)
 • Gaurav Singh (Gaurav4069)
 • Md Tauqeer (Tauqeer52521)
-• Gaurav Simkar (
+• Gaurav Simkar (GauravSimkar)
 
 Tech Stack:
 MERN Stack

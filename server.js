@@ -13,7 +13,7 @@ dotenv.config();   // The config() is a method which is provided by the dotenv m
 connectDB();
 
 //middleware
-app.use(express.json());
+app.use(express.json());  //jo meera data aa raaha hai usko jsomn object recognise karne ke lie we use express.json()
 app.use(morgan('dev'));
 app.use('/api/v1/auth',authRoutes);
 

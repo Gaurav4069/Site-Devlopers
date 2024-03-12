@@ -5,7 +5,7 @@ import JWT from "jsonwebtoken"
 export const registerController= async(req,res)=>{
       try{
         const {name,email,password,phone,address} =req.body  //get data from client
-        //validation
+        //validation (postman me body me jo data hai waha se yaha leaae)
         if(!name){     //think here req.body.name can be used or not
           return  res.send({error:'Name is Required'});
         }
